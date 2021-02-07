@@ -1,39 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @contact.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
+<div class="jumbotron">
+  <h1 class="display-4">  <%= @contact.first_name %>
   <%= @contact.last_name %>
-</p>
+</h1>
+   <p class="lead"> <span class="text-info">Email:</span>  <%= @contact.email %></p>
+    <p class="lead"> <span class="text-info">Phone number:</span> <%= @contact.phone %></p>
+    <p class="lead"> <span class="text-info">Twitter:</span> <%= @contact.twitter %></p>
+    <p class="lead"> <span class="text-info">LinkedIn:</span> <%= @contact.linkedin %></p>
+     <p class="lead"> <span class="text-info">Facebook:</span>  <%= @contact.facebook  %></p>
+  <hr class="my-4">
+  <p class="lead">
+<%= link_to 'Edit', edit_contact_path(@contact), class: "btn btn-warning" %> 
+<%= link_to 'Back', contacts_path, class: "btn btn-primary" %>
+  </p>
+</div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @contact.email %>
-</p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @contact.phone %>
-</p>
 
-<p>
-  <strong>Twitter:</strong>
-  <%= @contact.twitter %>
-</p>
 
-<p>
-  <strong>Linkedin:</strong>
-  <%= @contact.linkedin %>
-</p>
 
-<p>
-  <strong>Facebook:</strong>
-  <%= @contact.facebook %>
-</p>
 
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+
+
+
+
+
+
+
