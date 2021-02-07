@@ -11,42 +11,53 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+  <div class="field form-group">
+    <%= form.text_field :first_name, class: "form-control", placeholder: "first name" %>
   </div>
 
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
+  <div class="field form-group">
+    <%= form.text_field :last_name, class: "form-control", placeholder: "last name" %>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+  <div class="field form-group">
+    <%= form.text_field :email, class: "form-control", placeholder: "email address" %>
   </div>
 
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone %>
+  <div class="field form-group">
+    <%= form.text_field :phone, class: "form-control", placeholder: "phone numebr" %>
   </div>
 
-  <div class="field">
-    <%= form.label :twitter %>
-    <%= form.text_field :twitter %>
+  <div class="field form-group">
+    <%= form.text_field :twitter, class: "form-control", placeholder: "twitter username" %>
   </div>
 
-  <div class="field">
-    <%= form.label :linkedin %>
-    <%= form.text_field :linkedin %>
+  <div class="field form-group">
+    <%= form.text_field :linkedin, class: "form-control", placeholder: "linkedin username" %>
   </div>
 
-  <div class="field">
-    <%= form.label :facebook %>
-    <%= form.text_field :facebook %>
+  <div class="field form-group">
+    <%= form.text_field :facebook, class: "form-control", placeholder: "facebook username" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
