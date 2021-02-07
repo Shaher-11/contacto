@@ -24,9 +24,9 @@
         <td><%= contact.twitter %></td>
         <td><%= contact.linkedin %></td>
         <td><%= contact.facebook %></td>
-        <td><%= link_to 'Show', contact %></td>
-        <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-        <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', contact, class: "btn btn-success" %></td>
+        <td><%= link_to 'Edit', edit_contact_path(contact), class: "btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', contact, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
