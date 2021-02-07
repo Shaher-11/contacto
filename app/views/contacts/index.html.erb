@@ -1,3 +1,6 @@
+
+<% if user_signed_in? %>
+
 <p id="notice"><%= notice %></p>
 
 <div class="table-responsive">
@@ -24,18 +27,21 @@
         <td><%= contact.twitter %></td>
         <td><%= contact.linkedin %></td>
         <td><%= contact.facebook %></td>
+        <% if contact.user == current_user %>
         <td><%= link_to 'Show', contact, class: "btn btn-success" %></td>
         <td><%= link_to 'Edit', edit_contact_path(contact), class: "btn btn-warning" %></td>
         <td><%= link_to 'Destroy', contact, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+          <% end %>
     <% end %>
   </tbody>
 </table>
 </div>
 <br>
 <%= link_to 'New Contact', new_contact_path, class: "btn btn-primary" %>
-
-
+<% else %>
+   <h1> You need to sign up to be able to get the app features</h1>
+<% end %>
 
 
 
