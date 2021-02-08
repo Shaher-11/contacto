@@ -18,8 +18,10 @@
   </thead>
 
   <tbody>
+  
     <% @contacts.each do |contact| %>
       <tr>
+              <% if contact.user == current_user %>
         <td><%= contact.first_name %></td>
         <td><%= contact.last_name %></td>
         <td><%= contact.email %></td>
@@ -27,7 +29,6 @@
         <td><%= contact.twitter %></td>
         <td><%= contact.linkedin %></td>
         <td><%= contact.facebook %></td>
-        <% if contact.user == current_user %>
         <td><%= link_to 'Show', contact, class: "btn btn-success" %></td>
         <td><%= link_to 'Edit', edit_contact_path(contact), class: "btn btn-warning" %></td>
         <td><%= link_to 'Destroy', contact, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
